@@ -46,8 +46,6 @@ def scrape(user, start, end):
         try:
             found_tweets = driver.find_elements_by_css_selector(tweet_selector)
             increment = 10
-
-            sleep(delay)
             while len(found_tweets) >= increment:
                 print('scrolling down to load more tweets')
                 driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')

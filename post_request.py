@@ -42,7 +42,7 @@ def get_metadata(user):
         ids = json.load(f)
     contents = []
     for i in range(0, len(ids), 100):
-        print("("+str(i)+"-"+str(i+100)+")/"+str(len(ids)))
+        print("("+str(i)+"-"+str(i+100)+") 0f "+str(len(ids)))
         id = ','.join(ids[i:min(i+100, len(ids))])
         c = get_tweet(id)
         for content in c:
