@@ -3,7 +3,6 @@ import json
 import base64
 
 def create_base_64_bearer_token(keys):
-    print('here')
     consumer_key = keys['consumer_key']
     consumer_secret = keys['consumer_secret']
     keys['base_64_bearer_token'] = base64.b64encode(bytearray(consumer_key+":"+consumer_secret, 'utf-8'))
@@ -11,11 +10,17 @@ def create_base_64_bearer_token(keys):
     return keys
 
 def get_tweet(id):
-    with open('api_keys.json') as f:
-        keys = json.load(f)
+    try:
+        with open('api_keys.json') as f:
+            keys = json.load(f)
+    except FileNotFoundError:
+        keys = []
+    if not 'consumer_key' in keys:
+        keys['consumer_key'] = input('Input Consumer Key for your twitter application: ')
+    if not 'consumer_secret' in keys:
+        keys['consumer_secret'] = input('Input Consumer Secret for your twitter application: ')
     if not 'base_64_bearer_token' in keys:
         keys = create_base_64_bearer_token(keys)
-        print(keys['base_64_bearer_token'])
     if not 'http_request_auth' in keys:
         params = urllib.parse.urlencode({"grant_type":"client_credentials"})
         headers = {"Content-type": "application/x-www-form-urlencoded",
@@ -24,7 +29,6 @@ def get_tweet(id):
         response, content = conn.request("https://api.twitter.com/oauth2/token", "POST", headers=headers, body=params)
         content = json.loads(content.decode("utf-8"))
         keys['http_request_auth'] = "Bearer " + content['access_token']
-        print(keys['http_request_auth'])
 
     headers = {"Authorization": keys['http_request_auth']}
     conn = httplib2.Http()
