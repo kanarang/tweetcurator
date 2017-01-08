@@ -16,13 +16,12 @@
 title: Tweet Curator
 email: kanarang@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "tweetcurator" # the subpath of your site, e.g. /blog
-url: "wwww.github.com/kanarang" # the base hostname & protocol for your site, e.g. http://example.com
+  Locally hosted, free Python based app that allows you to collect tweets 
+  from a particular user and format them in a number of ways.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://github.com/narangkay/tweetcurator" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: narangkay
-github_username:  kanarang
+github_username:  narangkay
 
 # Build settings
 markdown: kramdown

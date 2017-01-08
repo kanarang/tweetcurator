@@ -1,25 +1,47 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Installation and usage instructions"
 date:   2017-01-08 01:43:10 +0530
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<br>
 
-Jekyll also offers powerful support for code snippets:
+### Step 1. Cloning the repository
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Go to the [tweetcurator github page](https://github.com/narangkay/tweetcurator) and clone or download the repository.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+<br>
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+### Step 2. Creating a Twitter Application
+
+Follow this short tutorial to [create a Twitter Application](https://themepacific.com/how-to-generate-api-key-consumer-token-access-key-for-twitter-oauth/994/) and generate a Consumer Key and Consumer Secret. Note that we do not need an Access Token or an Access Token Secret even though this is included in the tutorial above.
+
+<br>
+
+### Step 3. Make sure you have pip and Python installed
+
+<br>
+
+### Step 4. Installing dependencies
+
+Open the command line and run the following command:
+```sh
+pip install selenium, httplib2, urllib, json, base64, datetime
+```
+
+<br>
+
+### Step 5. Running the script
+
+Navigate to the downloaded repository on the command line and run the script:
+```sh
+cd <Path Of Your Downloaded Repository>
+python3 main.py
+```
+<br>
+
+# ALL DONE!
+
+
+Please report any errors on the [tweetcurator github page](https://github.com/narangkay/tweetcurator).
