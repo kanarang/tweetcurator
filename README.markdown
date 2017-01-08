@@ -1,12 +1,3 @@
----
-layout: post
-title:  "Installation and usage instructions"
-date:   2017-01-08 01:43:10 +0530
-categories: jekyll update
----
-
-<br>
-
 ### Step 1. Cloning the repository
 
 Go to the [tweetcurator github page](https://github.com/narangkay/tweetcurator) and clone or download the repository.
