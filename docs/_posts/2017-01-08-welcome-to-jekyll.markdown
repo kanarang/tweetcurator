@@ -46,7 +46,7 @@ python3 main.py
 <br>
 
 
-[1]:{{ site.url }}docs/download/main.zip
+[1]: https://github.com/narangkay/tweetcurator/raw/master/docs/download/main.zip
 
 # ALL DONE!
 
