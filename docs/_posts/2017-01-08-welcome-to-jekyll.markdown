@@ -5,6 +5,8 @@ date:   2017-01-08 01:43:10 +0530
 categories: jekyll update
 ---
 
+## If you want only the executable application, click [here][1], unzip main.zip, and run main.exe. For using the modifiable python source code, refer to the steps below.
+
 <br>
 
 ### Step 1. Cloning the repository
@@ -26,7 +28,8 @@ Follow this short tutorial to [create a Twitter Application](https://themepacifi
 ### Step 4. Installing dependencies
 
 Open the command line and run the following command:
-```sh
+
+```
 pip install selenium, httplib2, urllib, json, base64, datetime
 ```
 
@@ -35,11 +38,15 @@ pip install selenium, httplib2, urllib, json, base64, datetime
 ### Step 5. Running the script
 
 Navigate to the downloaded repository on the command line and run the script:
-```sh
+
+```
 cd <Path Of Your Downloaded Repository>
 python3 main.py
 ```
 <br>
+
+
+[1]:{{ site.url }}/download/main.zip
 
 # ALL DONE!
 
